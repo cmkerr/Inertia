@@ -6,6 +6,8 @@
 	update loop.
 */
 
+#include "Engine/Job/JobManager.h"
+
 #include <thread>
 
 class Main {
@@ -13,6 +15,8 @@ private:
     bool _running;
     std::thread *m_mainThread;
 
+    JobManager *m_jobManager;
+    
     void Initialize();
     
     void Update();

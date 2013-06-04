@@ -1,6 +1,10 @@
 #include "Main.h"
 
+#define JOB_MANAGER_THREADS 4
+
 using std::thread;
+
+#include <pthread.h>
 
 Main::Main(): _running(false), m_mainThread(nullptr) {}
 
@@ -26,10 +30,7 @@ void Main::realMain()
     // Update Loop
     while (_running)
     {
-        Update();
-        
-        
-        
+        Update();        
         
         std::this_thread::yield();
     }
@@ -41,12 +42,15 @@ void Main::realMain()
 
 void Main::Initialize()
 {
+    m_jobManager = new JobManager();
+    m_jobManager->Initialize(JOB_MANAGER_THREADS);
     
 }
 
 void Main::Shutdown()
 {
-    
+    m_jobManager->Shutdown();
+    delete m_jobManager;
 }
 
 void Main::Update()
