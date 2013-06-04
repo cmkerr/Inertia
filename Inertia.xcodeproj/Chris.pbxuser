@@ -1,0 +1,91 @@
+// !$*UTF8*$!
+{
+	83011630175C5EF400AD4DF4 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 83679826175C600300D56A4D /* Inertia */;
+		activeTarget = 83011637175C5EF400AD4DF4 /* Inertia */;
+		codeSenseManager = 83679846175C601100D56A4D /* Code sense */;
+		executables = (
+			83679826175C600300D56A4D /* Inertia */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					621,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 391929859;
+			PBXWorkspaceStateSaveDate = 391929859;
+		};
+		sourceControlManager = 83679845175C601100D56A4D /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	83011637175C5EF400AD4DF4 /* Inertia */ = {
+		activeExec = 0;
+		executables = (
+			83679826175C600300D56A4D /* Inertia */,
+		);
+	};
+	83679826175C600300D56A4D /* Inertia */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Inertia;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	83679845175C601100D56A4D /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	83679846175C601100D56A4D /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}

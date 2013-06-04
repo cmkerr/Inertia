@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8301163C175C5EF400AD4DF4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8301163B175C5EF400AD4DF4 /* Cocoa.framework */; };
+		83011646175C5EF400AD4DF4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83011644175C5EF400AD4DF4 /* InfoPlist.strings */; };
+		83011648175C5EF400AD4DF4 /* OSXMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 83011647175C5EF400AD4DF4 /* OSXMain.m */; };
+		8301164C175C5EF400AD4DF4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8301164A175C5EF400AD4DF4 /* Credits.rtf */; };
+		8301164F175C5EF400AD4DF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8301164E175C5EF400AD4DF4 /* AppDelegate.m */; };
+		83011652175C5EF400AD4DF4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83011650175C5EF400AD4DF4 /* MainMenu.xib */; };
+		83A99098175C6207002B6905 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A99096175C6207002B6905 /* Main.cpp */; };
+		83A990AA175C625C002B6905 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A9909C175C625C002B6905 /* Component.cpp */; };
+		83A990AB175C625C002B6905 /* ComponentManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A9909E175C625C002B6905 /* ComponentManager.cpp */; };
+		83A990AC175C625C002B6905 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A990A0175C625C002B6905 /* Entity.cpp */; };
+		83A990AD175C625C002B6905 /* JobManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A990A4175C625C002B6905 /* JobManager.cpp */; };
+		83A990AE175C625C002B6905 /* JobQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A990A6175C625C002B6905 /* JobQueue.cpp */; };
+		83A990AF175C625C002B6905 /* JobThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A990A8175C625C002B6905 /* JobThread.cpp */; };
+		83C3AE59175C6BA5008FABEE /* MainWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83C3AE58175C6BA5008FABEE /* MainWrapper.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83011638175C5EF400AD4DF4 /* Inertia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inertia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8301163B175C5EF400AD4DF4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8301163E175C5EF400AD4DF4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8301163F175C5EF400AD4DF4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		83011640175C5EF400AD4DF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		83011643175C5EF400AD4DF4 /* Inertia-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Inertia-Info.plist"; path = "Engine/Main/OSX/Inertia-Info.plist"; sourceTree = SOURCE_ROOT; };
+		83011645175C5EF400AD4DF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83011647175C5EF400AD4DF4 /* OSXMain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = OSXMain.m; path = Engine/Main/OSX/OSXMain.m; sourceTree = SOURCE_ROOT; };
+		83011649175C5EF400AD4DF4 /* Inertia-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Inertia-Prefix.pch"; path = "Engine/Main/OSX/Inertia-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		8301164B175C5EF400AD4DF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		8301164D175C5EF400AD4DF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Engine/Main/OSX/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		8301164E175C5EF400AD4DF4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Engine/Main/OSX/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		83011651175C5EF400AD4DF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		83A99096175C6207002B6905 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Main.cpp; path = Engine/Main/Main.cpp; sourceTree = "<group>"; };
+		83A99097175C6207002B6905 /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Main.h; path = Engine/Main/Main.h; sourceTree = "<group>"; };
+		83A9909C175C625C002B6905 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		83A9909D175C625C002B6905 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		83A9909E175C625C002B6905 /* ComponentManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ComponentManager.cpp; sourceTree = "<group>"; };
+		83A9909F175C625C002B6905 /* ComponentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentManager.h; sourceTree = "<group>"; };
+		83A990A0175C625C002B6905 /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		83A990A1175C625C002B6905 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		83A990A3175C625C002B6905 /* Job.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Job.h; sourceTree = "<group>"; };
+		83A990A4175C625C002B6905 /* JobManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JobManager.cpp; sourceTree = "<group>"; };
+		83A990A5175C625C002B6905 /* JobManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobManager.h; sourceTree = "<group>"; };
+		83A990A6175C625C002B6905 /* JobQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JobQueue.cpp; sourceTree = "<group>"; };
+		83A990A7175C625C002B6905 /* JobQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobQueue.h; sourceTree = "<group>"; };
+		83A990A8175C625C002B6905 /* JobThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JobThread.cpp; sourceTree = "<group>"; };
+		83A990A9175C625C002B6905 /* JobThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobThread.h; sourceTree = "<group>"; };
+		83C3AE57175C6BA5008FABEE /* MainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainWrapper.h; path = Engine/Main/OSX/MainWrapper.h; sourceTree = "<group>"; };
+		83C3AE58175C6BA5008FABEE /* MainWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MainWrapper.mm; path = Engine/Main/OSX/MainWrapper.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83011635175C5EF400AD4DF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8301163C175C5EF400AD4DF4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8301162F175C5EF400AD4DF4 = {
+			isa = PBXGroup;
+			children = (
+				83A990B1175C6290002B6905 /* Game */,
+				83A99094175C61EA002B6905 /* Engine */,
+				83A990B0175C6285002B6905 /* External */,
+				8301163A175C5EF400AD4DF4 /* Frameworks */,
+				83011639175C5EF400AD4DF4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83011639175C5EF400AD4DF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83011638175C5EF400AD4DF4 /* Inertia.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8301163A175C5EF400AD4DF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8301163B175C5EF400AD4DF4 /* Cocoa.framework */,
+				8301163D175C5EF400AD4DF4 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8301163D175C5EF400AD4DF4 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8301163E175C5EF400AD4DF4 /* AppKit.framework */,
+				8301163F175C5EF400AD4DF4 /* CoreData.framework */,
+				83011640175C5EF400AD4DF4 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		83011642175C5EF400AD4DF4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83011647175C5EF400AD4DF4 /* OSXMain.m */,
+				83011643175C5EF400AD4DF4 /* Inertia-Info.plist */,
+				83011644175C5EF400AD4DF4 /* InfoPlist.strings */,
+				83011649175C5EF400AD4DF4 /* Inertia-Prefix.pch */,
+				8301164A175C5EF400AD4DF4 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			path = Inertia;
+			sourceTree = "<group>";
+		};
+		83A99094175C61EA002B6905 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				83A9909A175C625C002B6905 /* Core */,
+				83A9909B175C625C002B6905 /* Entity */,
+				83A990A2175C625C002B6905 /* Job */,
+				83A99095175C61F8002B6905 /* Main */,
+			);
+			name = Engine;
+			sourceTree = "<group>";
+		};
+		83A99095175C61F8002B6905 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				83A99099175C620D002B6905 /* OSX */,
+				83A99096175C6207002B6905 /* Main.cpp */,
+				83A99097175C6207002B6905 /* Main.h */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		83A99099175C620D002B6905 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				8301164D175C5EF400AD4DF4 /* AppDelegate.h */,
+				8301164E175C5EF400AD4DF4 /* AppDelegate.m */,
+				83011650175C5EF400AD4DF4 /* MainMenu.xib */,
+				83011642175C5EF400AD4DF4 /* Supporting Files */,
+				83C3AE57175C6BA5008FABEE /* MainWrapper.h */,
+				83C3AE58175C6BA5008FABEE /* MainWrapper.mm */,
+			);
+			name = OSX;
+			sourceTree = "<group>";
+		};
+		83A9909A175C625C002B6905 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Core;
+			path = Engine/Core;
+			sourceTree = "<group>";
+		};
+		83A9909B175C625C002B6905 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				83A9909C175C625C002B6905 /* Component.cpp */,
+				83A9909D175C625C002B6905 /* Component.h */,
+				83A9909E175C625C002B6905 /* ComponentManager.cpp */,
+				83A9909F175C625C002B6905 /* ComponentManager.h */,
+				83A990A0175C625C002B6905 /* Entity.cpp */,
+				83A990A1175C625C002B6905 /* Entity.h */,
+			);
+			name = Entity;
+			path = Engine/Entity;
+			sourceTree = "<group>";
+		};
+		83A990A2175C625C002B6905 /* Job */ = {
+			isa = PBXGroup;
+			children = (
+				83A990A3175C625C002B6905 /* Job.h */,
+				83A990A4175C625C002B6905 /* JobManager.cpp */,
+				83A990A5175C625C002B6905 /* JobManager.h */,
+				83A990A6175C625C002B6905 /* JobQueue.cpp */,
+				83A990A7175C625C002B6905 /* JobQueue.h */,
+				83A990A8175C625C002B6905 /* JobThread.cpp */,
+				83A990A9175C625C002B6905 /* JobThread.h */,
+			);
+			name = Job;
+			path = Engine/Job;
+			sourceTree = "<group>";
+		};
+		83A990B0175C6285002B6905 /* External */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		83A990B1175C6290002B6905 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83011637175C5EF400AD4DF4 /* Inertia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83011655175C5EF400AD4DF4 /* Build configuration list for PBXNativeTarget "Inertia" */;
+			buildPhases = (
+				83011634175C5EF400AD4DF4 /* Sources */,
+				83011635175C5EF400AD4DF4 /* Frameworks */,
+				83011636175C5EF400AD4DF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Inertia;
+			productName = Inertia;
+			productReference = 83011638175C5EF400AD4DF4 /* Inertia.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83011630175C5EF400AD4DF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Chris;
+			};
+			buildConfigurationList = 83011633175C5EF400AD4DF4 /* Build configuration list for PBXProject "Inertia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8301162F175C5EF400AD4DF4;
+			productRefGroup = 83011639175C5EF400AD4DF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83011637175C5EF400AD4DF4 /* Inertia */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83011636175C5EF400AD4DF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83011646175C5EF400AD4DF4 /* InfoPlist.strings in Resources */,
+				8301164C175C5EF400AD4DF4 /* Credits.rtf in Resources */,
+				83011652175C5EF400AD4DF4 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83011634175C5EF400AD4DF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83011648175C5EF400AD4DF4 /* OSXMain.m in Sources */,
+				8301164F175C5EF400AD4DF4 /* AppDelegate.m in Sources */,
+				83A99098175C6207002B6905 /* Main.cpp in Sources */,
+				83A990AA175C625C002B6905 /* Component.cpp in Sources */,
+				83A990AB175C625C002B6905 /* ComponentManager.cpp in Sources */,
+				83A990AC175C625C002B6905 /* Entity.cpp in Sources */,
+				83A990AD175C625C002B6905 /* JobManager.cpp in Sources */,
+				83A990AE175C625C002B6905 /* JobQueue.cpp in Sources */,
+				83A990AF175C625C002B6905 /* JobThread.cpp in Sources */,
+				83C3AE59175C6BA5008FABEE /* MainWrapper.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		83011644175C5EF400AD4DF4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83011645175C5EF400AD4DF4 /* en */,
+			);
+			name = InfoPlist.strings;
+			path = Engine/Main/OSX;
+			sourceTree = SOURCE_ROOT;
+		};
+		8301164A175C5EF400AD4DF4 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8301164B175C5EF400AD4DF4 /* en */,
+			);
+			name = Credits.rtf;
+			path = Engine/Main/OSX;
+			sourceTree = SOURCE_ROOT;
+		};
+		83011650175C5EF400AD4DF4 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83011651175C5EF400AD4DF4 /* en */,
+			);
+			name = MainMenu.xib;
+			path = Engine/Main/OSX;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83011653175C5EF400AD4DF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = .;
+			};
+			name = Debug;
+		};
+		83011654175C5EF400AD4DF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = .;
+			};
+			name = Release;
+		};
+		83011656175C5EF400AD4DF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Engine/Main/OSX/Inertia-Prefix.pch";
+				INFOPLIST_FILE = "Engine/Main/OSX/Inertia-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		83011657175C5EF400AD4DF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Engine/Main/OSX/Inertia-Prefix.pch";
+				INFOPLIST_FILE = "Engine/Main/OSX/Inertia-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83011633175C5EF400AD4DF4 /* Build configuration list for PBXProject "Inertia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83011653175C5EF400AD4DF4 /* Debug */,
+				83011654175C5EF400AD4DF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83011655175C5EF400AD4DF4 /* Build configuration list for PBXNativeTarget "Inertia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83011656175C5EF400AD4DF4 /* Debug */,
+				83011657175C5EF400AD4DF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83011630175C5EF400AD4DF4 /* Project object */;
+}
