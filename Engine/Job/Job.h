@@ -13,4 +13,6 @@ public:
     Job(Priority a_priority): priority(a_priority) {}
     
     virtual void Run() = 0;
+    
+    friend bool operator< (Job&, Job&);
 };

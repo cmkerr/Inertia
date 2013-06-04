@@ -23,7 +23,7 @@ void JobThread::loop()
 		Job *work = m_manager->fetchJob();
 		if (work)
 		{
-
+            work->Run();
 		}
 		else
 		{
