@@ -20,6 +20,7 @@
 		83A990AD175C625C002B6905 /* JobManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A990A4175C625C002B6905 /* JobManager.cpp */; };
 		83A990AE175C625C002B6905 /* JobQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A990A6175C625C002B6905 /* JobQueue.cpp */; };
 		83A990AF175C625C002B6905 /* JobThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A990A8175C625C002B6905 /* JobThread.cpp */; };
+		83AB6679175DA4E8006E7D42 /* Job.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83AB6678175DA4E8006E7D42 /* Job.cpp */; };
 		83C3AE59175C6BA5008FABEE /* MainWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83C3AE58175C6BA5008FABEE /* MainWrapper.mm */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		83A990A7175C625C002B6905 /* JobQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobQueue.h; sourceTree = "<group>"; };
 		83A990A8175C625C002B6905 /* JobThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JobThread.cpp; sourceTree = "<group>"; };
 		83A990A9175C625C002B6905 /* JobThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobThread.h; sourceTree = "<group>"; };
+		83AB6678175DA4E8006E7D42 /* Job.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Job.cpp; sourceTree = "<group>"; };
 		83C3AE57175C6BA5008FABEE /* MainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainWrapper.h; path = Engine/Main/OSX/MainWrapper.h; sourceTree = "<group>"; };
 		83C3AE58175C6BA5008FABEE /* MainWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MainWrapper.mm; path = Engine/Main/OSX/MainWrapper.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				83A990A3175C625C002B6905 /* Job.h */,
+				83AB6678175DA4E8006E7D42 /* Job.cpp */,
 				83A990A4175C625C002B6905 /* JobManager.cpp */,
 				83A990A5175C625C002B6905 /* JobManager.h */,
 				83A990A6175C625C002B6905 /* JobQueue.cpp */,
@@ -278,6 +281,7 @@
 				83A990AE175C625C002B6905 /* JobQueue.cpp in Sources */,
 				83A990AF175C625C002B6905 /* JobThread.cpp in Sources */,
 				83C3AE59175C6BA5008FABEE /* MainWrapper.mm in Sources */,
+				83AB6679175DA4E8006E7D42 /* Job.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
