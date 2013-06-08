@@ -1,19 +1,9 @@
-//
-//  AppDelegate.h
-//  Inertia
-//
-//  Created by Chris on 13-06-02.
-//  Copyright (c) 2013 Chris. All rights reserved.
-//
+#pragma once
 
 #import <Cocoa/Cocoa.h>
-#import "MainWrapper.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
-{
-    MainWrapper *m_Main;
-}
+@interface AppDelegate : NSObject<NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+- (void) applicationWillFinishLaunching:(NSNotification *)notification;
 
 @end

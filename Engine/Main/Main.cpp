@@ -6,7 +6,7 @@ using std::thread;
 
 #include <pthread.h>
 
-Main::Main(): _running(false), m_mainThread(nullptr) {}
+Main::Main(Window *window): _running(false), m_mainThread(nullptr), m_window(window) {}
 
 void Main::Start()
 {
@@ -24,6 +24,10 @@ void Main::Stop()
 
 void Main::realMain()
 {
+#ifdef __APPLE__
+    pthread_setname_np("Update Thread");
+#endif
+    
     // Initialize
     Initialize();
     
@@ -32,6 +36,8 @@ void Main::realMain()
     {
         Update();        
         
+        
+        //m_window->Draw();
         std::this_thread::yield();
     }
     
@@ -53,8 +59,8 @@ void Main::Shutdown()
     delete m_jobManager;
 }
 
+
 void Main::Update()
 {
-    
     
 }

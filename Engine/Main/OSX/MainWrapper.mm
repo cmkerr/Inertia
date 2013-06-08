@@ -13,7 +13,7 @@
 @implementation MainWrapper
 
 -(void) Initialize {
-    m_Main = new Main();
+    m_Main = new Main(w);
 
     m_Main->Start();
 }

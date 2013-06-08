@@ -18,6 +18,10 @@ JobThread::~JobThread(void)
 
 void JobThread::loop()
 {
+#ifdef __APPLE__
+    pthread_setname_np("Job Thread");
+#endif
+    
 	while (m_running)
 	{
 		Job *work = m_manager->fetchJob();

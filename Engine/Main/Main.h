@@ -7,6 +7,7 @@
 */
 
 #include "Engine/Job/JobManager.h"
+#include "Engine/Main/Window.h"
 
 #include <thread>
 
@@ -15,6 +16,8 @@ private:
     bool _running;
     std::thread *m_mainThread;
 
+    Window *m_window;
+    
     JobManager *m_jobManager;
     
     void Initialize();
@@ -23,15 +26,13 @@ private:
     
     void Shutdown();
     
-    
+    void realMain();
 public:
-    Main();
+    Main(Window *);
     
     
     void Start();
     void Stop();
     
-    
-    void realMain();
-
+    friend std::thread;
 };
