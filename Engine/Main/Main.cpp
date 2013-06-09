@@ -36,7 +36,6 @@ void Main::realMain()
     // Initialize
     Initialize();
     
-    
     m_window->Show();
     
     

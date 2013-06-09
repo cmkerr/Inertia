@@ -43,13 +43,22 @@ void MacWindow::Initialize()
 void MacWindow::HandleEvents()
 {
     NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
-    NSEvent* event = [NSApp nextEventMatchingMask:NSAnyEventMask
-                            untilDate:[NSDate distantPast]
-                            inMode:NSDefaultRunLoopMode
-                            dequeue:YES];
-    if (event) {
-        [NSApp sendEvent:event];
-        [NSApp updateWindows];
+    
+    @try
+    {
+        NSEvent* event = [NSApp nextEventMatchingMask:NSAnyEventMask
+                                untilDate:[NSDate distantPast]
+                                inMode:NSDefaultRunLoopMode
+                                dequeue:YES];
+        if (event) {
+            [NSApp sendEvent:event];
+            [NSApp updateWindows];
+        }
+    }
+    @catch (NSException *e)
+    {
+        // Running nib-less appears to ocassionally cause an exception on the first
+        // HandeEvents() call. Just ignore the exception.
     }
     [pool release];
 }

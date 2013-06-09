@@ -14,7 +14,7 @@
 
 class Main {
 private:
-    bool _running;
+    std::atomic<bool> _running;
     std::thread *m_mainThread;
     
     Window *m_window;
