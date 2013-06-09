@@ -2,7 +2,7 @@
 
 #import <OpenGL/gl.h>
 
-@interface View : NSView{
+@interface CocoaView : NSView{
     NSOpenGLContext *m_context;
     NSOpenGLPixelFormat *m_format;
 }

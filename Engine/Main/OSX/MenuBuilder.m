@@ -17,7 +17,7 @@
 	[self populateApplicationMenu:submenu];
 	[mainMenu setSubmenu:submenu forItem:item];
 	
-	item = [mainMenu addItemWithTitle:@"File" action:NULL keyEquivalent:@""];
+	/*item = [mainMenu addItemWithTitle:@"File" action:NULL keyEquivalent:@""];
 	submenu = [[[NSMenu alloc] initWithTitle:NSLocalizedString(@"File", @"The File menu")] autorelease];
 	[self populateFileMenu:submenu];
 	[mainMenu setSubmenu:submenu forItem:item];
@@ -25,7 +25,7 @@
 	item = [mainMenu addItemWithTitle:@"Edit" action:NULL keyEquivalent:@""];
 	submenu = [[[NSMenu alloc] initWithTitle:NSLocalizedString(@"Edit", @"The Edit menu")] autorelease];
 	[self populateEditMenu:submenu];
-	[mainMenu setSubmenu:submenu forItem:item];
+	[mainMenu setSubmenu:submenu forItem:item];*/
 	
 	/*item = [mainMenu addItemWithTitle:@"View" action:NULL keyEquivalent:@""];
 	submenu = [[[NSMenu alloc] initWithTitle:NSLocalizedString(@"View", @"The View menu")] autorelease];
@@ -52,7 +52,7 @@
 }
 
 +(void) populateApplicationMenu:(NSMenu *)menu {
-	NSString * applicationName = @"OGL Framework";
+	NSString * applicationName = @"Inertia";
 	NSMenuItem * item;
 	
 	item = [menu addItemWithTitle:[NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"About", nil), applicationName]
@@ -242,7 +242,7 @@
 +(void) populateHelpMenu:(NSMenu *)menu {
 	NSMenuItem * item;
 	
-	item = [menu addItemWithTitle:[NSString stringWithFormat:@"%@ %@", @"OGL Framework", NSLocalizedString(@"Help", nil)]
+	item = [menu addItemWithTitle:[NSString stringWithFormat:@"%@ %@", @"Inertia", NSLocalizedString(@"Help", nil)]
 						   action:@selector(showHelp:)
 					keyEquivalent:@"?"];
 	[item setTarget:NSApp];

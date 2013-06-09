@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8301163C175C5EF400AD4DF4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8301163B175C5EF400AD4DF4 /* Cocoa.framework */; };
-		8301164F175C5EF400AD4DF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8301164E175C5EF400AD4DF4 /* AppDelegate.m */; };
+		8301164F175C5EF400AD4DF4 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8301164E175C5EF400AD4DF4 /* AppDelegate.mm */; };
+		836B52E41764D85200619224 /* RenderSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 836B52E21764D85200619224 /* RenderSystem.cpp */; };
 		838881CB1763B39D005BA654 /* MacWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 838881C91763B39D005BA654 /* MacWindow.mm */; };
 		838881CC1763B39D005BA654 /* MacMain.mm in Sources */ = {isa = PBXBuildFile; fileRef = 838881CA1763B39D005BA654 /* MacMain.mm */; };
 		838881D11763B3AD005BA654 /* MenuBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 838881CE1763B3AD005BA654 /* MenuBuilder.m */; };
-		838881D21763B3AD005BA654 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 838881D01763B3AD005BA654 /* View.m */; };
 		83A99098175C6207002B6905 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A99096175C6207002B6905 /* Main.cpp */; };
 		83A990AA175C625C002B6905 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A9909C175C625C002B6905 /* Component.cpp */; };
 		83A990AB175C625C002B6905 /* ComponentManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A9909E175C625C002B6905 /* ComponentManager.cpp */; };
@@ -23,6 +23,8 @@
 		83AB6679175DA4E8006E7D42 /* Job.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83AB6678175DA4E8006E7D42 /* Job.cpp */; };
 		83AB6680175DA94A006E7D42 /* InputSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83AB667E175DA94A006E7D42 /* InputSystem.cpp */; };
 		83B4BE70175EE3170089999D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B4BE6F175EE3170089999D /* OpenGL.framework */; };
+		83C0A6481764EFC200BCC43C /* CocoaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0A6451764EFC200BCC43C /* CocoaView.m */; };
+		83C0A6491764EFC200BCC43C /* MacView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83C0A6471764EFC200BCC43C /* MacView.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,14 +34,14 @@
 		8301163F175C5EF400AD4DF4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		83011640175C5EF400AD4DF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8301164D175C5EF400AD4DF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Engine/Main/OSX/AppDelegate.h; sourceTree = SOURCE_ROOT; };
-		8301164E175C5EF400AD4DF4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Engine/Main/OSX/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		8301164E175C5EF400AD4DF4 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Engine/Main/OSX/AppDelegate.mm; sourceTree = SOURCE_ROOT; };
+		836B52E21764D85200619224 /* RenderSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderSystem.cpp; path = Engine/Render/RenderSystem.cpp; sourceTree = "<group>"; };
+		836B52E31764D85200619224 /* RenderSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderSystem.h; path = Engine/Render/RenderSystem.h; sourceTree = "<group>"; };
 		838881C81763B39D005BA654 /* MacWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacWindow.h; path = Engine/Main/OSX/MacWindow.h; sourceTree = "<group>"; };
 		838881C91763B39D005BA654 /* MacWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MacWindow.mm; path = Engine/Main/OSX/MacWindow.mm; sourceTree = "<group>"; };
 		838881CA1763B39D005BA654 /* MacMain.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MacMain.mm; path = Engine/Main/OSX/MacMain.mm; sourceTree = "<group>"; };
 		838881CD1763B3AD005BA654 /* MenuBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuBuilder.h; path = Engine/Main/OSX/MenuBuilder.h; sourceTree = "<group>"; };
 		838881CE1763B3AD005BA654 /* MenuBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuBuilder.m; path = Engine/Main/OSX/MenuBuilder.m; sourceTree = "<group>"; };
-		838881CF1763B3AD005BA654 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = View.h; path = Engine/Main/OSX/View.h; sourceTree = "<group>"; };
-		838881D01763B3AD005BA654 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = View.m; path = Engine/Main/OSX/View.m; sourceTree = "<group>"; };
 		838881D31763C21B005BA654 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Window.h; path = Engine/Main/Window.h; sourceTree = "<group>"; };
 		83A99096175C6207002B6905 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Main.cpp; path = Engine/Main/Main.cpp; sourceTree = "<group>"; };
 		83A99097175C6207002B6905 /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Main.h; path = Engine/Main/Main.h; sourceTree = "<group>"; };
@@ -62,6 +64,11 @@
 		83AB667F175DA94A006E7D42 /* InputSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputSystem.h; path = Engine/Input/InputSystem.h; sourceTree = "<group>"; };
 		83AB6682175DAA05006E7D42 /* InputEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InputEvents.h; path = Engine/Input/InputEvents.h; sourceTree = "<group>"; };
 		83B4BE6F175EE3170089999D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		83C0A6441764EFC200BCC43C /* CocoaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CocoaView.h; path = Engine/Render/OSX/CocoaView.h; sourceTree = "<group>"; };
+		83C0A6451764EFC200BCC43C /* CocoaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CocoaView.m; path = Engine/Render/OSX/CocoaView.m; sourceTree = "<group>"; };
+		83C0A6461764EFC200BCC43C /* MacView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacView.h; path = Engine/Render/OSX/MacView.h; sourceTree = "<group>"; };
+		83C0A6471764EFC200BCC43C /* MacView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MacView.mm; path = Engine/Render/OSX/MacView.mm; sourceTree = "<group>"; };
+		83C0A64A1764EFCE00BCC43C /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = View.h; path = Engine/Render/View.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +123,17 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
+		836B52E91764EEF800619224 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				83C0A6441764EFC200BCC43C /* CocoaView.h */,
+				83C0A6451764EFC200BCC43C /* CocoaView.m */,
+				83C0A6461764EFC200BCC43C /* MacView.h */,
+				83C0A6471764EFC200BCC43C /* MacView.mm */,
+			);
+			name = OSX;
+			sourceTree = "<group>";
+		};
 		83A99094175C61EA002B6905 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,13 +164,11 @@
 			children = (
 				838881CD1763B3AD005BA654 /* MenuBuilder.h */,
 				838881CE1763B3AD005BA654 /* MenuBuilder.m */,
-				838881CF1763B3AD005BA654 /* View.h */,
-				838881D01763B3AD005BA654 /* View.m */,
 				838881C81763B39D005BA654 /* MacWindow.h */,
 				838881C91763B39D005BA654 /* MacWindow.mm */,
-				838881CA1763B39D005BA654 /* MacMain.mm */,
 				8301164D175C5EF400AD4DF4 /* AppDelegate.h */,
-				8301164E175C5EF400AD4DF4 /* AppDelegate.m */,
+				8301164E175C5EF400AD4DF4 /* AppDelegate.mm */,
+				838881CA1763B39D005BA654 /* MacMain.mm */,
 			);
 			name = OSX;
 			sourceTree = "<group>";
@@ -230,6 +246,10 @@
 		83AB667D175DA92F006E7D42 /* Render */ = {
 			isa = PBXGroup;
 			children = (
+				836B52E91764EEF800619224 /* OSX */,
+				83C0A64A1764EFCE00BCC43C /* View.h */,
+				836B52E21764D85200619224 /* RenderSystem.cpp */,
+				836B52E31764D85200619224 /* RenderSystem.h */,
 			);
 			name = Render;
 			sourceTree = "<group>";
@@ -295,7 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8301164F175C5EF400AD4DF4 /* AppDelegate.m in Sources */,
+				8301164F175C5EF400AD4DF4 /* AppDelegate.mm in Sources */,
 				83A99098175C6207002B6905 /* Main.cpp in Sources */,
 				83A990AA175C625C002B6905 /* Component.cpp in Sources */,
 				83A990AB175C625C002B6905 /* ComponentManager.cpp in Sources */,
@@ -308,7 +328,9 @@
 				838881CB1763B39D005BA654 /* MacWindow.mm in Sources */,
 				838881CC1763B39D005BA654 /* MacMain.mm in Sources */,
 				838881D11763B3AD005BA654 /* MenuBuilder.m in Sources */,
-				838881D21763B3AD005BA654 /* View.m in Sources */,
+				836B52E41764D85200619224 /* RenderSystem.cpp in Sources */,
+				83C0A6481764EFC200BCC43C /* CocoaView.m in Sources */,
+				83C0A6491764EFC200BCC43C /* MacView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

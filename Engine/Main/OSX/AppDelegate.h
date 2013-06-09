@@ -6,4 +6,6 @@
 
 - (void) applicationWillFinishLaunching:(NSNotification *)notification;
 
+- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender;
+
 @end

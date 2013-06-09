@@ -1,6 +1,6 @@
-#import "View.h"
+#import "CocoaView.h"
 
-@implementation View
+@implementation CocoaView
 
 #include <OpenGL/glu.h>
 

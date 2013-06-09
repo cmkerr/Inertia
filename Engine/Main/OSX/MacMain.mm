@@ -8,21 +8,23 @@ int main()
     pthread_setname_np("Main Thread");
 #endif
     
-    
     Window *w = new MacWindow();
-    Main *m = new Main(w);
+    //Main *m = new Main(w);
+    Main::s_Main = new Main(w);
     
     w->Initialize();
-    w->Show();
     
-    m->Start();
+    Main::s_Main->Start();
     
+    // This should be a call to Main::IsRunning(), but this thread
+    // won't get control back after the message pump sends the terminate
+    // event.
+    //while (Main::s_Main->IsRunning())
     while (true)
     {
         w->HandleEvents();
-        
-        w->Draw();
     }
     
+    // This is never actually hit on Mac
     w->Close();
 }
