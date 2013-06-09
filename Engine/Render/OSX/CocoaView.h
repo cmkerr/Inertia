@@ -5,6 +5,9 @@
 @interface CocoaView : NSView{
     NSOpenGLContext *m_context;
     NSOpenGLPixelFormat *m_format;
+    
+    bool needsResize;
+    NSRect resizeFrame;
 }
 - (id)initWithFrame:(NSRect)frame;
 - (void) dealloc;
