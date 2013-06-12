@@ -1,12 +1,20 @@
 #include "Main.h"
 
+#include "Game/Components/PositionComponent.h"
+#include "Engine/Entity/ComponentManager.h"
+
 #define JOB_MANAGER_THREADS 4
 
 using std::thread;
 
 Main *Main::s_Main = nullptr;
 
-Main::Main(Window *window): _running(false), m_mainThread(nullptr), m_window(window) {}
+Main::Main(Window *window):
+    _running(false),
+    m_mainThread(nullptr),
+    m_window(window)
+{
+}
 
 void Main::Start()
 {
@@ -50,6 +58,7 @@ void Main::realMain()
     Shutdown();
 }
 
+#include <string>
 
 void Main::Initialize()
 {
@@ -58,6 +67,19 @@ void Main::Initialize()
     
     m_renderSystem = new RenderSystem();
     m_renderSystem->Initialize(m_window);
+    
+    //ERMAGERD HARDCODES
+    Entity *e1 = Entity::createEntity("1234512345123451");
+    ComponentManager<PositionComponent>::Instance()->addComponent(e1, new PositionComponent(0,0,0));
+    ComponentManager<std::string>::Instance()->addComponent(e1, new std::string("test"));
+    
+    ComponentManager<PositionComponent>::iterator it = ComponentManager<PositionComponent>::Instance()->begin();
+    ComponentManager<PositionComponent>::iterator end = ComponentManager<PositionComponent>::Instance()->end();
+    
+    for (; it != end; ++it)
+    {
+        
+    }
 }
 
 void Main::Shutdown()

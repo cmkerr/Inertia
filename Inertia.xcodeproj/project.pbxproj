@@ -10,11 +10,11 @@
 		8301163C175C5EF400AD4DF4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8301163B175C5EF400AD4DF4 /* Cocoa.framework */; };
 		8301164F175C5EF400AD4DF4 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8301164E175C5EF400AD4DF4 /* AppDelegate.mm */; };
 		836B52E41764D85200619224 /* RenderSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 836B52E21764D85200619224 /* RenderSystem.cpp */; };
+		8381B6C51765315200D63517 /* PositionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8381B6C31765315200D63517 /* PositionComponent.cpp */; };
 		838881CB1763B39D005BA654 /* MacWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 838881C91763B39D005BA654 /* MacWindow.mm */; };
 		838881CC1763B39D005BA654 /* MacMain.mm in Sources */ = {isa = PBXBuildFile; fileRef = 838881CA1763B39D005BA654 /* MacMain.mm */; };
 		838881D11763B3AD005BA654 /* MenuBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 838881CE1763B3AD005BA654 /* MenuBuilder.m */; };
 		83A99098175C6207002B6905 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A99096175C6207002B6905 /* Main.cpp */; };
-		83A990AA175C625C002B6905 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A9909C175C625C002B6905 /* Component.cpp */; };
 		83A990AB175C625C002B6905 /* ComponentManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A9909E175C625C002B6905 /* ComponentManager.cpp */; };
 		83A990AC175C625C002B6905 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A990A0175C625C002B6905 /* Entity.cpp */; };
 		83A990AD175C625C002B6905 /* JobManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A990A4175C625C002B6905 /* JobManager.cpp */; };
@@ -37,6 +37,8 @@
 		8301164E175C5EF400AD4DF4 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Engine/Main/OSX/AppDelegate.mm; sourceTree = SOURCE_ROOT; };
 		836B52E21764D85200619224 /* RenderSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderSystem.cpp; path = Engine/Render/RenderSystem.cpp; sourceTree = "<group>"; };
 		836B52E31764D85200619224 /* RenderSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderSystem.h; path = Engine/Render/RenderSystem.h; sourceTree = "<group>"; };
+		8381B6C31765315200D63517 /* PositionComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PositionComponent.cpp; path = Components/PositionComponent.cpp; sourceTree = "<group>"; };
+		8381B6C41765315200D63517 /* PositionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PositionComponent.h; path = Components/PositionComponent.h; sourceTree = "<group>"; };
 		838881C81763B39D005BA654 /* MacWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacWindow.h; path = Engine/Main/OSX/MacWindow.h; sourceTree = "<group>"; };
 		838881C91763B39D005BA654 /* MacWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MacWindow.mm; path = Engine/Main/OSX/MacWindow.mm; sourceTree = "<group>"; };
 		838881CA1763B39D005BA654 /* MacMain.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MacMain.mm; path = Engine/Main/OSX/MacMain.mm; sourceTree = "<group>"; };
@@ -45,7 +47,6 @@
 		838881D31763C21B005BA654 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Window.h; path = Engine/Main/Window.h; sourceTree = "<group>"; };
 		83A99096175C6207002B6905 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Main.cpp; path = Engine/Main/Main.cpp; sourceTree = "<group>"; };
 		83A99097175C6207002B6905 /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Main.h; path = Engine/Main/Main.h; sourceTree = "<group>"; };
-		83A9909C175C625C002B6905 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
 		83A9909D175C625C002B6905 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
 		83A9909E175C625C002B6905 /* ComponentManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ComponentManager.cpp; sourceTree = "<group>"; };
 		83A9909F175C625C002B6905 /* ComponentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentManager.h; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		83A990A8175C625C002B6905 /* JobThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JobThread.cpp; sourceTree = "<group>"; };
 		83A990A9175C625C002B6905 /* JobThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobThread.h; sourceTree = "<group>"; };
 		83AB6678175DA4E8006E7D42 /* Job.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Job.cpp; sourceTree = "<group>"; };
-		83AB667B175DA7F7006E7D42 /* TestJob.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TestJob.h; path = Engine/Test/TestJob.h; sourceTree = "<group>"; };
 		83AB667E175DA94A006E7D42 /* InputSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InputSystem.cpp; path = Engine/Input/InputSystem.cpp; sourceTree = "<group>"; };
 		83AB667F175DA94A006E7D42 /* InputSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputSystem.h; path = Engine/Input/InputSystem.h; sourceTree = "<group>"; };
 		83AB6682175DAA05006E7D42 /* InputEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InputEvents.h; path = Engine/Input/InputEvents.h; sourceTree = "<group>"; };
@@ -87,7 +87,6 @@
 		8301162F175C5EF400AD4DF4 = {
 			isa = PBXGroup;
 			children = (
-				83B4BE6F175EE3170089999D /* OpenGL.framework */,
 				83A990B1175C6290002B6905 /* Game */,
 				83A99094175C61EA002B6905 /* Engine */,
 				83A990B0175C6285002B6905 /* External */,
@@ -107,6 +106,7 @@
 		8301163A175C5EF400AD4DF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83B4BE6F175EE3170089999D /* OpenGL.framework */,
 				8301163B175C5EF400AD4DF4 /* Cocoa.framework */,
 				8301163D175C5EF400AD4DF4 /* Other Frameworks */,
 			);
@@ -134,12 +134,20 @@
 			name = OSX;
 			sourceTree = "<group>";
 		};
+		8381B6C21765300B00D63517 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8381B6C31765315200D63517 /* PositionComponent.cpp */,
+				8381B6C41765315200D63517 /* PositionComponent.h */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
 		83A99094175C61EA002B6905 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
 				83AB667D175DA92F006E7D42 /* Render */,
 				83AB667C175DA923006E7D42 /* Input */,
-				83AB667A175DA7D2006E7D42 /* Test */,
 				83A9909A175C625C002B6905 /* Core */,
 				83A9909B175C625C002B6905 /* Entity */,
 				83A990A2175C625C002B6905 /* Job */,
@@ -184,7 +192,6 @@
 		83A9909B175C625C002B6905 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				83A9909C175C625C002B6905 /* Component.cpp */,
 				83A9909D175C625C002B6905 /* Component.h */,
 				83A9909E175C625C002B6905 /* ComponentManager.cpp */,
 				83A9909F175C625C002B6905 /* ComponentManager.h */,
@@ -221,16 +228,9 @@
 		83A990B1175C6290002B6905 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				8381B6C21765300B00D63517 /* Components */,
 			);
 			path = Game;
-			sourceTree = "<group>";
-		};
-		83AB667A175DA7D2006E7D42 /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				83AB667B175DA7F7006E7D42 /* TestJob.h */,
-			);
-			name = Test;
 			sourceTree = "<group>";
 		};
 		83AB667C175DA923006E7D42 /* Input */ = {
@@ -317,7 +317,6 @@
 			files = (
 				8301164F175C5EF400AD4DF4 /* AppDelegate.mm in Sources */,
 				83A99098175C6207002B6905 /* Main.cpp in Sources */,
-				83A990AA175C625C002B6905 /* Component.cpp in Sources */,
 				83A990AB175C625C002B6905 /* ComponentManager.cpp in Sources */,
 				83A990AC175C625C002B6905 /* Entity.cpp in Sources */,
 				83A990AD175C625C002B6905 /* JobManager.cpp in Sources */,
@@ -331,6 +330,7 @@
 				836B52E41764D85200619224 /* RenderSystem.cpp in Sources */,
 				83C0A6481764EFC200BCC43C /* CocoaView.m in Sources */,
 				83C0A6491764EFC200BCC43C /* MacView.mm in Sources */,
+				8381B6C51765315200D63517 /* PositionComponent.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

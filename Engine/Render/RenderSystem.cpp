@@ -6,6 +6,9 @@
 
 #import <OpenGL/glu.h>
 
+#include "Engine/Entity/ComponentManager.h"
+#include "Game/Components/PositionComponent.h"
+
 RenderSystem::RenderSystem() : m_view(nullptr)
 {
     
@@ -15,6 +18,7 @@ void RenderSystem::Initialize(Window *window)
 {
     m_view = new MacView();
     m_view->Initialize(window);
+
 }
 
 void RenderSystem::Shutdown()
@@ -28,10 +32,21 @@ void RenderSystem::Draw()
     
     // Issue draw commands
     // ...
+    
+
+    ComponentManager<PositionComponent>::Instance();
+    //ComponentManager<PositionComponent>::iterator it  = ComponentManager<PositionComponent>::Instance()->begin();
+    //ComponentManager<PositionComponent>::iterator end = ComponentManager<PositionComponent>::Instance()->end();
+    //for (; it != ComponentManager<PositionComponent>::Instance()->end(); ++it)
+    //{
+    //
+    //}
+    
+    
     glMatrixMode(GL_MODELVIEW);
     
     // set the background colour
-    glClearColor (0.0f, 0.0f, 0.0f, 1.0f);
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClearDepth(1.0f);
     
     // inform the context that the view has been resized
