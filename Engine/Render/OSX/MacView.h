@@ -10,6 +10,8 @@
 class CocoaView;
 #endif
 
+namespace Inertia {
+
 class MacView : public View {
 private:
     CocoaView *m_view;
@@ -24,3 +26,5 @@ public:
     virtual void present();
     
 };
+
+}

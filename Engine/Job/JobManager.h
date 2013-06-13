@@ -5,6 +5,9 @@
 
 #include <list>
 
+
+namespace Inertia {
+
 class JobManager {
 private:
     JobQueue *m_jobs;
@@ -21,3 +24,5 @@ public:
     
     Job* fetchJob();
 };
+
+}

@@ -7,6 +7,8 @@
 
 using std::thread;
 
+namespace Inertia {
+
 Main *Main::s_Main = nullptr;
 
 Main::Main(Window *window):
@@ -58,7 +60,6 @@ void Main::realMain()
     Shutdown();
 }
 
-#include <string>
 
 void Main::Initialize()
 {
@@ -68,22 +69,32 @@ void Main::Initialize()
     m_renderSystem = new RenderSystem();
     m_renderSystem->Initialize(m_window);
     
+    m_inputSystem = new InputSystem();
+    m_inputSystem->Initialize();
+    
     //ERMAGERD HARDCODES
     Entity *e1 = Entity::createEntity("1234512345123451");
-    ComponentManager<PositionComponent>::Instance()->addComponent(e1, new PositionComponent(0,0,0));
-    ComponentManager<std::string>::Instance()->addComponent(e1, new std::string("test"));
+    ComponentManager<PositionComponent>::Instance()->addComponent(e1, new PositionComponent(0,0,-5));
+    //ComponentManager<std::string>::Instance()->addComponent(e1, new std::string("test"));
     
     ComponentManager<PositionComponent>::iterator it = ComponentManager<PositionComponent>::Instance()->begin();
     ComponentManager<PositionComponent>::iterator end = ComponentManager<PositionComponent>::Instance()->end();
     
     for (; it != end; ++it)
     {
-        
+        m_inputSystem->registerComponent(it.component, MoveLeft);
+        m_inputSystem->registerComponent(it.component, MoveRight);
+        m_inputSystem->registerComponent(it.component, MoveUp);
+        m_inputSystem->registerComponent(it.component, MoveDown);
     }
+    // END OF HARDCODES
 }
 
 void Main::Shutdown()
 {
+    m_inputSystem->Shutdown();
+    delete m_inputSystem;
+    
     m_renderSystem->Shutdown();
     delete m_renderSystem;
     
@@ -94,5 +105,14 @@ void Main::Shutdown()
 
 void Main::Update()
 {
+    m_inputSystem->Update();
+    
+    // AI
+    
+    // Physics
+    
+    
     m_renderSystem->Draw();
+}
+    
 }

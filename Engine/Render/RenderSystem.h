@@ -4,6 +4,8 @@
 
 #include "Engine/Main/Window.h"
 
+namespace Inertia {
+
 class RenderSystem {
 private:
     View *m_view;
@@ -18,3 +20,5 @@ public:
     void Draw();
     
 };
+
+}

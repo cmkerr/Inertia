@@ -3,6 +3,9 @@
 #include <uuid/uuid.h>
 #include <list>
 
+
+namespace Inertia {
+
 class Entity {
 private:
     char guid[16];
@@ -10,6 +13,8 @@ private:
     Entity();
     Entity(const char[]);
     
+    // Disallow copying of Entities.
+    // Pointers to the entity should be used instead.
     Entity(const Entity&);
     Entity& operator= (const Entity&);
     
@@ -29,3 +34,5 @@ public:
     friend bool operator== (const Entity&, const Entity&);
     friend bool operator!= (const Entity&, const Entity&);
 };
+
+}

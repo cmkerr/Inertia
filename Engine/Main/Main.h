@@ -9,8 +9,11 @@
 #include "Engine/Job/JobManager.h"
 #include "Engine/Main/Window.h"
 #include "Engine/Render/RenderSystem.h"
+#include "Engine/Input/InputSystem.h"
 
 #include <thread>
+
+namespace Inertia {
 
 class Main {
 private:
@@ -20,6 +23,7 @@ private:
     Window *m_window;
     JobManager *m_jobManager;
     RenderSystem *m_renderSystem;
+    InputSystem *m_inputSystem;
     
     void Initialize();
     void Update();
@@ -39,3 +43,5 @@ public:
     
     friend std::thread;
 };
+
+}

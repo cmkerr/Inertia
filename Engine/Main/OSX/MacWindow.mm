@@ -6,6 +6,8 @@
 #import <stdlib.h>
 
 
+namespace Inertia {
+
 MacWindow::MacWindow() : m_window(nullptr) {}
 
 void MacWindow::Initialize()
@@ -83,5 +85,7 @@ void MacWindow::Close()
 void* MacWindow::GetNativeHandle()
 {
     return m_window;
+}
+    
 }
 

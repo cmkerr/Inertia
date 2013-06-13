@@ -25,6 +25,7 @@
 		83B4BE70175EE3170089999D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B4BE6F175EE3170089999D /* OpenGL.framework */; };
 		83C0A6481764EFC200BCC43C /* CocoaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C0A6451764EFC200BCC43C /* CocoaView.m */; };
 		83C0A6491764EFC200BCC43C /* MacView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83C0A6471764EFC200BCC43C /* MacView.mm */; };
+		83E48D8517696278001F2593 /* MacInputHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83E48D8317696278001F2593 /* MacInputHandler.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,10 @@
 		83E48D7F17695CF9001F2593 /* safe_btree_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safe_btree_map.h; sourceTree = "<group>"; };
 		83E48D8017695CF9001F2593 /* safe_btree_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safe_btree_set.h; sourceTree = "<group>"; };
 		83E48D8117695DD1001F2593 /* COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		83E48D8317696278001F2593 /* MacInputHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MacInputHandler.mm; path = Engine/Input/OSX/MacInputHandler.mm; sourceTree = "<group>"; };
+		83E48D8417696278001F2593 /* MacInputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacInputHandler.h; path = Engine/Input/OSX/MacInputHandler.h; sourceTree = "<group>"; };
+		83E48D861769645C001F2593 /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InputHandler.h; path = Engine/Input/InputHandler.h; sourceTree = "<group>"; };
+		83E48D8717696D9A001F2593 /* InputConcepts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InputConcepts.h; path = Engine/Input/InputConcepts.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,9 +251,12 @@
 		83AB667C175DA923006E7D42 /* Input */ = {
 			isa = PBXGroup;
 			children = (
-				83AB667E175DA94A006E7D42 /* InputSystem.cpp */,
-				83AB667F175DA94A006E7D42 /* InputSystem.h */,
+				83E48D8217696254001F2593 /* OSX */,
 				83AB6682175DAA05006E7D42 /* InputEvents.h */,
+				83E48D8717696D9A001F2593 /* InputConcepts.h */,
+				83E48D861769645C001F2593 /* InputHandler.h */,
+				83AB667F175DA94A006E7D42 /* InputSystem.h */,
+				83AB667E175DA94A006E7D42 /* InputSystem.cpp */,
 			);
 			name = Input;
 			sourceTree = "<group>";
@@ -278,6 +286,15 @@
 				83E48D8017695CF9001F2593 /* safe_btree_set.h */,
 			);
 			path = btree;
+			sourceTree = "<group>";
+		};
+		83E48D8217696254001F2593 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				83E48D8317696278001F2593 /* MacInputHandler.mm */,
+				83E48D8417696278001F2593 /* MacInputHandler.h */,
+			);
+			name = OSX;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +374,7 @@
 				83C0A6481764EFC200BCC43C /* CocoaView.m in Sources */,
 				83C0A6491764EFC200BCC43C /* MacView.mm in Sources */,
 				8381B6C51765315200D63517 /* PositionComponent.cpp in Sources */,
+				83E48D8517696278001F2593 /* MacInputHandler.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

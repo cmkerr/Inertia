@@ -4,6 +4,9 @@
 
 #import <Cocoa/Cocoa.h>
 
+
+namespace Inertia {
+
 class MacWindow : public Window {
 private:
     NSWindow *m_window;
@@ -19,3 +22,5 @@ public:
     
     virtual void* GetNativeHandle();
 };
+
+}

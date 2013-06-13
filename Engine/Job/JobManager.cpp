@@ -1,6 +1,9 @@
 #include "JobManager.h"
 #include "JobQueue.h"
 
+
+namespace Inertia {
+
 JobManager::JobManager() : m_jobs(nullptr)
 {
     m_jobs = new JobQueue();
@@ -38,4 +41,6 @@ void JobManager::submitJob(Job *job)
 Job* JobManager::fetchJob()
 {
     return m_jobs->removeJob();
+}
+
 }

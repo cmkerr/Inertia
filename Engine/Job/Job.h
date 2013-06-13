@@ -1,5 +1,8 @@
 #pragma once
 
+
+namespace Inertia {
+
 class Job {
 public:
     enum Priority {
@@ -16,3 +19,6 @@ public:
     
     friend bool operator< (Job&, Job&);
 };
+
+
+}

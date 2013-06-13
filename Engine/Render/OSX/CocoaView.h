@@ -9,6 +9,8 @@
     bool needsResize;
     NSRect resizeFrame;
 }
+- (void)keyDown:(NSEvent *)theEvent;
+
 - (id)initWithFrame:(NSRect)frame;
 - (void) dealloc;
 

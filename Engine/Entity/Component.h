@@ -1,5 +1,7 @@
 #pragma once
 
+namespace Inertia {
+
 class Component {
     // It may be beneficial to move to a 2-stage update system:
     // 1) First do an Observe() in which the component can see all other
@@ -11,3 +13,5 @@ class Component {
     // with the only synchronization points being at the ends of the
     // Observe() and Update() steps.
 };
+
+}

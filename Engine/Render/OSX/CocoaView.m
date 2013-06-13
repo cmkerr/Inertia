@@ -4,6 +4,9 @@
 
 #include <OpenGL/glu.h>
 
+// This is purely to stop the error sound on key down/up
+- (void)keyDown:(NSEvent *)theEvent {}
+
 - (id)initWithFrame:(NSRect)frame
 {
     self = [super initWithFrame:frame];

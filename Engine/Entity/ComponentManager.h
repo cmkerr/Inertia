@@ -3,12 +3,16 @@
 #include "Entity.h"
 #include "Component.h"
 
-#include "External/btree/btree_map.h"
+//#include "External/btree/btree_map.h"
+#include <map>
+
+
+namespace Inertia {
 
 template <class T>
 class ComponentManager {
 private:
-    btree::btree_map<Entity*, T*> m_components;
+    std::map<Entity*, T*> m_components;
     
     static ComponentManager<T> s_manager;
 public:
@@ -25,7 +29,7 @@ public:
     
     void removeComponent(T* component)
     {
-        typename btree::btree_map<Entity*, T*>::iterator it = m_components.begin();
+        typename std::map<Entity*, T*>::iterator it = m_components.begin();
         for (; it != m_components.end(); ++it)
         {
             if (it->second == component)
@@ -37,41 +41,40 @@ public:
     }
     
     
-    class iterator : public btree::btree_map<Entity*, T*>::iterator {
+    class iterator : public std::map<Entity*, T*>::iterator {
     private:
-        iterator(typename btree::btree_map<Entity*, T*>::iterator it) : btree::btree_map<Entity*, T*>::iterator(it)
+        iterator(typename std::map<Entity*, T*>::iterator it) : std::map<Entity*, T*>::iterator(it)
         {
-            entity = ((typename btree::btree_map<Entity*, T*>::iterator) *this)->first;
-            component = ((typename btree::btree_map<Entity*, T*>::iterator) *this)->second;
+            entity = ((typename std::map<Entity*, T*>::iterator) *this)->first;
+            component = ((typename std::map<Entity*, T*>::iterator) *this)->second;
         }
         friend ComponentManager<T>;
     public:
         Entity *entity;
         T *component;
         
-        iterator() : btree::btree_map<Entity*, T*>::iterator()
+        iterator() : std::map<Entity*, T*>::iterator()
         {
-            //entity =
             entity = nullptr;
-            component = nullptr; //((typename std::map<Entity*, T*>::iterator) *this)->first;
+            component = nullptr;
         }
 
         iterator& operator++()
         {
-            btree::btree_map<Entity*, T*>::iterator::operator++();
+            std::map<Entity*, T*>::iterator::operator++();
 
-            entity = ((typename btree::btree_map<Entity*, T*>::iterator) *this)->first;
-            component = ((typename btree::btree_map<Entity*, T*>::iterator) *this)->second;
+            entity = ((typename std::map<Entity*, T*>::iterator) *this)->first;
+            component = ((typename std::map<Entity*, T*>::iterator) *this)->second;
             
             return *this;
         }
         iterator operator++(int)
         {
             iterator ret = *this;
-            btree::btree_map<Entity*, T*>::iterator::operator++();
+            std::map<Entity*, T*>::iterator::operator++();
             
-            entity = ((typename btree::btree_map<Entity*, T*>::iterator) *this)->first;
-            component = ((typename btree::btree_map<Entity*, T*>::iterator) *this)->second;
+            entity = ((typename std::map<Entity*, T*>::iterator) *this)->first;
+            component = ((typename std::map<Entity*, T*>::iterator) *this)->second;
             
             return ret;
         }
@@ -93,4 +96,6 @@ public:
 
 template <class T>
 ComponentManager<T> ComponentManager<T>::s_manager;
+    
+}
 

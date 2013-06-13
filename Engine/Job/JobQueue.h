@@ -5,6 +5,9 @@
 #include <queue>
 #include <thread>
 
+
+namespace Inertia {
+
 class JobQueue {
 private:
     std::priority_queue<Job*> *m_queue;
@@ -17,3 +20,5 @@ public:
     void addJob(Job*);
     Job* removeJob();
 };
+
+}

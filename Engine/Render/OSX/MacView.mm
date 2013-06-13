@@ -1,6 +1,8 @@
 #include "MacView.h"
 #include "MacWindow.h"
 
+namespace Inertia {
+
 MacView::MacView() : m_view(nullptr)
 {
     
@@ -33,4 +35,6 @@ void MacView::makeReady()
 void MacView::present()
 {
     [m_view present];
+}
+
 }

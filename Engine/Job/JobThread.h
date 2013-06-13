@@ -2,6 +2,8 @@
 
 #include <thread>
 
+namespace Inertia {
+
 class JobManager;
 
 class JobThread
@@ -22,3 +24,4 @@ public:
 	void shutdown();
 };
 
+}

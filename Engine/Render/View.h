@@ -2,6 +2,8 @@
 
 #include "Engine/Main/Window.h"
 
+namespace Inertia {
+
 class View {
 public:
     virtual void Initialize(Window *) = 0;
@@ -10,3 +12,5 @@ public:
     virtual void makeReady() = 0;
     virtual void present() = 0;
 };
+
+}

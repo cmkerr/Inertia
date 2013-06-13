@@ -1,5 +1,8 @@
 #include "JobQueue.h"
 
+
+namespace Inertia {
+
 JobQueue::JobQueue()
 {
     m_queue = new std::priority_queue<Job*>();
@@ -34,4 +37,6 @@ Job* JobQueue::removeJob()
     m_lock.unlock();
     
     return job;
+}
+
 }

@@ -1,5 +1,8 @@
 #pragma once
 
+
+namespace Inertia {
+
 class Window {
 public:
     virtual void Initialize() = 0;
@@ -10,3 +13,5 @@ public:
 
     virtual void* GetNativeHandle() = 0;
 };
+
+}

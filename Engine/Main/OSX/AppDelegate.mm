@@ -16,13 +16,12 @@
 
 - (void) windowClosing:(NSNotification *)notification
 {
-    //Main::s_Main->Stop();
     [NSApp terminate: self];
 }
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
-    Main::s_Main->Stop();
+    Inertia::Main::s_Main->Stop();
     
     return YES;
 }

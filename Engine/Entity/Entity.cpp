@@ -2,6 +2,9 @@
 
 #include <cstring>
 
+
+namespace Inertia {
+
 std::list<Entity*> Entity::s_entities;
 
 Entity::Entity()
@@ -70,4 +73,6 @@ bool operator== (const Entity& e1, const Entity& e2)
 bool operator!= (const Entity& e1, const Entity& e2)
 {
     return strncmp(e1.guid, e2.guid, sizeof(e1.guid)) != 0;
+}
+
 }

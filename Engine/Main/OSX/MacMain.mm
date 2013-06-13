@@ -8,13 +8,13 @@ int main()
     pthread_setname_np("Main Thread");
 #endif
     
-    Window *w = new MacWindow();
+    Inertia::Window *w = new Inertia::MacWindow();
     //Main *m = new Main(w);
-    Main::s_Main = new Main(w);
+    Inertia::Main::s_Main = new Inertia::Main(w);
     
     w->Initialize();
     
-    Main::s_Main->Start();
+    Inertia::Main::s_Main->Start();
     
     // This should be a call to Main::IsRunning(), but this thread
     // won't get control back after the message pump sends the terminate

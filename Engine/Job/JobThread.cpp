@@ -5,6 +5,9 @@
 
 #include <pthread.h>
 
+
+namespace Inertia {
+
 JobThread::JobThread(JobManager *manager) : m_running(true), m_thread(nullptr), m_manager(manager)
 {
     m_thread = new std::thread(&JobThread::loop, this);
@@ -40,4 +43,6 @@ void JobThread::shutdown()
 {
 	m_running = false;
 	m_thread->join();
+}
+
 }
