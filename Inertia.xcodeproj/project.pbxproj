@@ -69,6 +69,15 @@
 		83C0A6461764EFC200BCC43C /* MacView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacView.h; path = Engine/Render/OSX/MacView.h; sourceTree = "<group>"; };
 		83C0A6471764EFC200BCC43C /* MacView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MacView.mm; path = Engine/Render/OSX/MacView.mm; sourceTree = "<group>"; };
 		83C0A64A1764EFCE00BCC43C /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = View.h; path = Engine/Render/View.h; sourceTree = "<group>"; };
+		83E48D7917695CF9001F2593 /* btree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btree.h; sourceTree = "<group>"; };
+		83E48D7A17695CF9001F2593 /* btree_container.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btree_container.h; sourceTree = "<group>"; };
+		83E48D7B17695CF9001F2593 /* btree_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btree_map.h; sourceTree = "<group>"; };
+		83E48D7C17695CF9001F2593 /* btree_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btree_set.h; sourceTree = "<group>"; };
+		83E48D7D17695CF9001F2593 /* btree_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btree_test.h; sourceTree = "<group>"; };
+		83E48D7E17695CF9001F2593 /* safe_btree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safe_btree.h; sourceTree = "<group>"; };
+		83E48D7F17695CF9001F2593 /* safe_btree_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safe_btree_map.h; sourceTree = "<group>"; };
+		83E48D8017695CF9001F2593 /* safe_btree_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safe_btree_set.h; sourceTree = "<group>"; };
+		83E48D8117695DD1001F2593 /* COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +230,7 @@
 		83A990B0175C6285002B6905 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				83E48D7817695CF9001F2593 /* btree */,
 			);
 			path = External;
 			sourceTree = "<group>";
@@ -252,6 +262,22 @@
 				836B52E31764D85200619224 /* RenderSystem.h */,
 			);
 			name = Render;
+			sourceTree = "<group>";
+		};
+		83E48D7817695CF9001F2593 /* btree */ = {
+			isa = PBXGroup;
+			children = (
+				83E48D8117695DD1001F2593 /* COPYING */,
+				83E48D7917695CF9001F2593 /* btree.h */,
+				83E48D7A17695CF9001F2593 /* btree_container.h */,
+				83E48D7B17695CF9001F2593 /* btree_map.h */,
+				83E48D7C17695CF9001F2593 /* btree_set.h */,
+				83E48D7D17695CF9001F2593 /* btree_test.h */,
+				83E48D7E17695CF9001F2593 /* safe_btree.h */,
+				83E48D7F17695CF9001F2593 /* safe_btree_map.h */,
+				83E48D8017695CF9001F2593 /* safe_btree_set.h */,
+			);
+			path = btree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
