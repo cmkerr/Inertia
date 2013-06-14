@@ -9,6 +9,7 @@
 #import  <Cocoa/Cocoa.h>
 #else
 class NSEvent;
+typedef void* id;
 #endif
 
 #include <mutex>
@@ -23,8 +24,9 @@ private:
     inline void queueInput(Input);
     inline Input dequeueInput();
     
-    InputAction getKeyType(unsigned short);
+    InputEvent translateNativeEvent(unsigned short);
     
+    id m_eventMonitor;
     void handleEvent(NSEvent *);
     
 public:

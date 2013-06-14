@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8301163C175C5EF400AD4DF4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8301163B175C5EF400AD4DF4 /* Cocoa.framework */; };
 		8301164F175C5EF400AD4DF4 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8301164E175C5EF400AD4DF4 /* AppDelegate.mm */; };
+		83402F2E176AEB170034C9AA /* InputEvents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83402F2D176AEB170034C9AA /* InputEvents.cpp */; };
 		836B52E41764D85200619224 /* RenderSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 836B52E21764D85200619224 /* RenderSystem.cpp */; };
 		8381B6C51765315200D63517 /* PositionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8381B6C31765315200D63517 /* PositionComponent.cpp */; };
 		838881CB1763B39D005BA654 /* MacWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 838881C91763B39D005BA654 /* MacWindow.mm */; };
@@ -36,6 +37,7 @@
 		83011640175C5EF400AD4DF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8301164D175C5EF400AD4DF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Engine/Main/OSX/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		8301164E175C5EF400AD4DF4 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Engine/Main/OSX/AppDelegate.mm; sourceTree = SOURCE_ROOT; };
+		83402F2D176AEB170034C9AA /* InputEvents.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InputEvents.cpp; path = Engine/Input/InputEvents.cpp; sourceTree = "<group>"; };
 		836B52E21764D85200619224 /* RenderSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderSystem.cpp; path = Engine/Render/RenderSystem.cpp; sourceTree = "<group>"; };
 		836B52E31764D85200619224 /* RenderSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderSystem.h; path = Engine/Render/RenderSystem.h; sourceTree = "<group>"; };
 		8381B6C31765315200D63517 /* PositionComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PositionComponent.cpp; path = Components/PositionComponent.cpp; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			children = (
 				83E48D8217696254001F2593 /* OSX */,
 				83AB6682175DAA05006E7D42 /* InputEvents.h */,
+				83402F2D176AEB170034C9AA /* InputEvents.cpp */,
 				83E48D8717696D9A001F2593 /* InputConcepts.h */,
 				83E48D861769645C001F2593 /* InputHandler.h */,
 				83AB667F175DA94A006E7D42 /* InputSystem.h */,
@@ -375,6 +378,7 @@
 				83C0A6491764EFC200BCC43C /* MacView.mm in Sources */,
 				8381B6C51765315200D63517 /* PositionComponent.cpp in Sources */,
 				83E48D8517696278001F2593 /* MacInputHandler.mm in Sources */,
+				83402F2E176AEB170034C9AA /* InputEvents.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -60,7 +60,27 @@ void Main::realMain()
     Shutdown();
 }
 
-
+void test(Component* comp, InputConcept input)
+{
+    PositionComponent *p = (PositionComponent*) comp;
+    if (input == InputConcept_MoveLeft)
+    {
+        p->x -= 0.1;
+    }
+    else if (input == InputConcept_MoveRight)
+    {
+        p->x += 0.1;
+    }
+    else if (input == InputConcept_MoveUp)
+    {
+        p->y += 0.1;
+    }
+    else if (input == InputConcept_MoveDown)
+    {
+        p->y -= 0.1;
+    }
+}
+    
 void Main::Initialize()
 {
     m_jobManager = new JobManager();
@@ -82,10 +102,10 @@ void Main::Initialize()
     
     for (; it != end; ++it)
     {
-        m_inputSystem->registerComponent(it.component, MoveLeft);
-        m_inputSystem->registerComponent(it.component, MoveRight);
-        m_inputSystem->registerComponent(it.component, MoveUp);
-        m_inputSystem->registerComponent(it.component, MoveDown);
+        m_inputSystem->registerComponent(it.component, InputConcept_MoveLeft, test);
+        m_inputSystem->registerComponent(it.component, InputConcept_MoveRight, test);
+        m_inputSystem->registerComponent(it.component, InputConcept_MoveUp, test);
+        m_inputSystem->registerComponent(it.component, InputConcept_MoveDown, test);
     }
     // END OF HARDCODES
 }
