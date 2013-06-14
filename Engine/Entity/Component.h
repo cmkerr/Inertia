@@ -1,7 +1,9 @@
 #pragma once
 
-namespace Inertia {
+#include "Engine/Entity/Entity.h"
 
+namespace Inertia {
+    
 class Component {
     // It may be beneficial to move to a 2-stage update system:
     // 1) First do an Observe() in which the component can see all other
@@ -12,6 +14,10 @@ class Component {
     // Such a system allows for lockless, parallel updates of components
     // with the only synchronization points being at the ends of the
     // Observe() and Update() steps.
+    
+public:
+    Component(Entity *e) : entity(e) {}
+    const Entity *entity;
 };
 
 }

@@ -11,7 +11,7 @@ private:
 public:
     double x, y, z;
 
-    PositionComponent(double _x, double _y, double _z) : x(_x), y(_y), z(_z) {}
+    PositionComponent(Entity *e, double _x, double _y, double _z) : Component(e), x(_x), y(_y), z(_z) {}
 };
 
 }

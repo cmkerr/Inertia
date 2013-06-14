@@ -8,7 +8,8 @@
 
 namespace Inertia {
 
-typedef void (*InputConceptCallback) (Component*, InputConcept);
+typedef void (*InputConceptCallback) (Component*, InputConcept, bool);
+    
 struct InputRegistration {
     Component *component;
     InputConceptCallback callback;
@@ -19,8 +20,8 @@ class InputSystem {
 private:
     InputHandler *m_inputHandler;
     
-    std::multimap<Input, InputConcept> m_bindings;
-    void bindConcept(InputConcept, InputEvent, InputAction);
+    std::multimap<Input, std::pair<InputConcept, bool>> m_bindings;
+    void bindConcept(InputConcept, bool, InputEvent, InputAction);
     
     void loadBindings();
     
@@ -32,7 +33,7 @@ public:
     void Initialize();
     void Shutdown();
     
-    void registerComponent(Component*, InputConcept, void (*) (Component*, InputConcept));
+    void registerComponent(Component*, InputConcept, InputConceptCallback);
     
     void Update();
 };

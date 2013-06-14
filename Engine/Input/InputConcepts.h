@@ -9,5 +9,5 @@ enum InputConcept {
     InputConcept_MoveUp,
     InputConcept_MoveDown,
 };
-
+    
 }

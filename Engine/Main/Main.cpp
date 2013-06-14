@@ -1,6 +1,7 @@
 #include "Main.h"
 
 #include "Game/Components/PositionComponent.h"
+#include "Game/Components/LocomotionComponent.h"
 #include "Engine/Entity/ComponentManager.h"
 
 #define JOB_MANAGER_THREADS 4
@@ -60,24 +61,25 @@ void Main::realMain()
     Shutdown();
 }
 
-void test(Component* comp, InputConcept input)
+void test(Component* comp, InputConcept input, bool value)
 {
-    PositionComponent *p = (PositionComponent*) comp;
-    if (input == InputConcept_MoveLeft)
+    LocomotionComponent * loco = (LocomotionComponent*) comp;
+    switch (input)
     {
-        p->x -= 0.1;
-    }
-    else if (input == InputConcept_MoveRight)
-    {
-        p->x += 0.1;
-    }
-    else if (input == InputConcept_MoveUp)
-    {
-        p->y += 0.1;
-    }
-    else if (input == InputConcept_MoveDown)
-    {
-        p->y -= 0.1;
+        case InputConcept_MoveLeft:
+            loco->movingLeft = value;
+            break;
+        case InputConcept_MoveRight:
+            loco->movingRight = value;
+            break;
+        case InputConcept_MoveUp:
+            loco->movingUp = value;
+            break;
+        case InputConcept_MoveDown:
+            loco->movingDown = value;
+            break;
+        default:
+            break;
     }
 }
     
@@ -94,12 +96,18 @@ void Main::Initialize()
     
     //ERMAGERD HARDCODES
     Entity *e1 = Entity::createEntity("1234512345123451");
-    ComponentManager<PositionComponent>::Instance()->addComponent(e1, new PositionComponent(0,0,-5));
-    //ComponentManager<std::string>::Instance()->addComponent(e1, new std::string("test"));
+    ComponentManager<PositionComponent>::Instance()->addComponent(e1, new PositionComponent(e1, 0,0,-5));
+    ComponentManager<LocomotionComponent>::Instance()->addComponent(e1, new LocomotionComponent(e1));
     
-    ComponentManager<PositionComponent>::iterator it = ComponentManager<PositionComponent>::Instance()->begin();
-    ComponentManager<PositionComponent>::iterator end = ComponentManager<PositionComponent>::Instance()->end();
+    Entity *e2 = Entity::createEntity("12345123451234512");
+    ComponentManager<PositionComponent>::Instance()->addComponent(e2, new PositionComponent(e2, 5,0,-5));
+    ComponentManager<LocomotionComponent>::Instance()->addComponent(e2, new LocomotionComponent(e2));
     
+    Entity *e3 = Entity::createEntity("12345123451234513");
+    ComponentManager<PositionComponent>::Instance()->addComponent(e3, new PositionComponent(e3, 0,0,0));
+    
+    ComponentManager<LocomotionComponent>::iterator it = ComponentManager<LocomotionComponent>::Instance()->begin();
+    ComponentManager<LocomotionComponent>::iterator end = ComponentManager<LocomotionComponent>::Instance()->end();
     for (; it != end; ++it)
     {
         m_inputSystem->registerComponent(it.component, InputConcept_MoveLeft, test);
@@ -130,6 +138,29 @@ void Main::Update()
     // AI
     
     // Physics
+    ComponentManager<LocomotionComponent>::iterator it = ComponentManager<LocomotionComponent>::Instance()->begin();
+    ComponentManager<LocomotionComponent>::iterator end = ComponentManager<LocomotionComponent>::Instance()->end();
+    for (; it != end; ++it)
+    {
+        PositionComponent* pos = ComponentManager<PositionComponent>::Instance()->getComponent(it.entity);
+        LocomotionComponent* loco = it.component;
+        if (loco->movingLeft)
+        {
+            pos->x -= 0.1;
+        }
+        if (loco->movingRight)
+        {
+            pos->x += 0.1;
+        }
+        if (loco->movingUp)
+        {
+            pos->y += 0.1;
+        }
+        if (loco->movingDown)
+        {
+            pos->y -= 0.1;
+        }
+    }
     
     
     m_renderSystem->Draw();

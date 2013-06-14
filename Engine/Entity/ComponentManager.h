@@ -17,6 +17,11 @@ private:
     static ComponentManager<T> s_manager;
 public:
     
+    T* getComponent(Entity* entity)
+    {
+        return m_components.find(entity)->second;
+    }
+    
     void addComponent(Entity* entity, T* component)
     {
         m_components.insert(std::pair<Entity*, T*>(entity, component));
